@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -15,7 +14,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "jest": "jest src/*.test.js",
+    "mocha": "mocha src --require jsdom-global/register"
   },
   "eslintConfig": {
     "extends": [
@@ -33,6 +36,32 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.2.5",
+    "babel-core": "^6.26.3",
+    "babel-jest": "26.6.0",
+    "babel-preset-env": "^1.7.0",
+    "cypress": "^6.3.0",
+    "jest": "26.6.0",
+    "jsdom": "^16.4.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^8.2.1",
+    "react-test-renderer": "^17.0.1"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/*"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app",
+      "es2015",
+      "stage-3",
+      "latest",
+      "env"
     ]
   }
 }
