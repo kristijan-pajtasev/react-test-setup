@@ -13,12 +13,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false --testMatch=\"**/?(*.)+(unit).js\"",
+    "test:unit": "react-scripts test --watchAll=false ",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "jest": "jest src/*.test.js",
-    "mocha": "mocha src --require jsdom-global/register"
+    "jest": "jest src/*.test.js"
   },
   "eslintConfig": {
     "extends": [
@@ -40,9 +40,6 @@
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.5",
-    "babel-core": "^6.26.3",
-    "babel-jest": "26.6.0",
-    "babel-preset-env": "^1.7.0",
     "cypress": "^6.3.0",
     "react-test-renderer": "^17.0.1"
   },
